@@ -6,13 +6,41 @@ A Stardew Valley Content Patcher mod that adds custom copyright-safe rarecrow sp
 
 1. Install [SMAPI](https://smapi.io/).
 2. Install [Content Patcher](https://www.nexusmods.com/stardewvalley/mods/1915).
-3. Create a folder called `Mods/NBC Rarecrows` and extract this mod into it.
+3. Extract this mod into `Mods/NBC Rarecrows`.
 
 ## Configure
 
-Edit `config.json` to change:
-- `SpriteSet` — choose the active sprite set.
-- shop and Traveling Cart availability flags.
+Open `config.json`, or use [Generic Mod Config Menu](https://www.nexusmods.com/stardewvalley/mods/5000) if installed. Settings are grouped by section.
+
+### Rares
+- `EnableGentleman`
+- `EnableSeamstress`
+- `EnablePatchworkGuardian`
+- `EnableSkeletonFarmer`
+- `EnableGhostDog`
+- `EnablePumpkinKing`
+
+### Shops
+- `EnableSpiritsEve`
+- `EnableTravelingCart`
+- `EnableNightMarket`
+- `PriceSpiritsEve`
+- `PriceTravelingCart`
+- `PriceNightMarket`
+- `StockPerPlayer`
+
+### Rarity
+- `AllAreRare`: if true, each rarecrow can be purchased once per player ever; if false, stock limits control availability.
+
+### Sprites
+- `SpriteSet`: `Primary` or `Testing`.
+
+### Bonuses
+- `EnableSkeletonFarmerBones`: Skeleton Farmer produces Bone Fragments daily.
+- `EnableGuardianCandy`: Patchwork Guardian produces Magic Rock Candy on Fall 26–27.
+- `EnableGhostDogGifts`: Ghost Dog produces a themed item every other day, seasonally weighted.
+- `EnablePumpkinKingGifts`: Pumpkin King produces a themed item every other day during Fall and Winter.
+- `EnableSpiritsEveCostumeDrops`: Fall 27 costume hats for players who own the related rarecrow.
 
 ## Uninstall
 
@@ -20,4 +48,8 @@ Remove the `Mods/NBC Rarecrows` folder.
 
 ## Credits
 
-- Sprites/content created for the NBC Rarecrows project.
+- Sprites and content created with help from generative AI; Dustin Jaeger provided direction and assembly.
+
+## Artwork
+
+The `Artwork/` folder in this repo contains higher-resolution concept/reference images used during sprite creation. These are included for reference and not needed to run the mod.
