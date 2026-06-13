@@ -56,7 +56,7 @@ Remove the `Mods/NBC Rarecrows` folder.
 
 ## Credits
 
-- Sprites and content created with help from generative AI; Dustin Jaeger provided direction and assembly.
+- Sprites and content created with help from generative AI; C01DB100DED provided direction and assembly.
 
 ## Artwork
 
