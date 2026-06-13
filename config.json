@@ -1,0 +1,22 @@
+{
+  "EnableGentleman": "true",
+  "EnableSeamstress": "true",
+  "EnableSpiritsEve": "true",
+  "EnableTravelingCart": "true",
+  "PriceSpiritsEve": "5000",
+  "PriceTravelingCart": "4000",
+  "StockPerPlayer": "1",
+  "SpriteSet": "Primary",
+  "EnableNightMarket": "true",
+  "PriceNightMarket": "3000",
+  "EnablePatchworkGuardian": "true",
+  "EnableSkeletonFarmer": "true",
+  "EnableSkeletonFarmerBones": "true",
+  "EnableGuardianCandy": "true",
+  "EnableGhostDog": "true",
+  "AllAreRare": "true",
+  "EnableGhostDogGifts": "true",
+  "EnablePumpkinKing": "true",
+  "EnablePumpkinKingGifts": "true",
+  "EnableSpiritsEveCostumeDrops": "true"
+}

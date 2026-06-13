@@ -1,0 +1,1885 @@
+{
+  "Format": "2.9.0",
+  "ConfigSchema": {
+    "EnableGentleman": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Description": "Allow the Pinstripe Gentleman rarecrow to be sold in shops & festivals. Existing placed rarecrows are not affected.",
+      "Section": "Rares"
+    },
+    "EnableSeamstress": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Description": "Allow the Patchwork Seamstress rarecrow to be sold in shops & festivals. Existing placed rarecrows are not affected.",
+      "Section": "Rares"
+    },
+    "EnableSpiritsEve": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Description": "(Primary) Sell enabled rarecrows at Spirit's Eve (Pierre).",
+      "Section": "Shops"
+    },
+    "EnableTravelingCart": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Description": "(Alternate) Allow enabled rarecrows to appear in the Traveling Cart (Fall/Winter).",
+      "Section": "Shops"
+    },
+    "PriceSpiritsEve": {
+      "Default": 5000,
+      "Description": "Price at Spirit's Eve (gold).",
+      "Section": "Prices"
+    },
+    "PriceTravelingCart": {
+      "Default": 4000,
+      "Description": "Price at the Traveling Cart (gold).",
+      "Section": "Prices"
+    },
+    "StockPerPlayer": {
+      "AllowValues": "1, 2, 3, 4, 5",
+      "Default": "1",
+      "Description": "How many each player can buy per shop/event.",
+      "Section": "Stock"
+    },
+    "SpriteSet": {
+      "AllowValues": "Primary, Testing",
+      "Default": "Primary",
+      "Description": "Choose which sprite set to use for all NBC rarecrows.",
+      "Section": "Sprites"
+    },
+    "EnableNightMarket": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Description": "(Alternate) Allow enabled rarecrows to appear at the Night Market when the Traveling Cart is present (Winter 15-17).",
+      "Section": "Shops"
+    },
+    "PriceNightMarket": {
+      "Default": 3000,
+      "Description": "Discounted price at the Night Market Traveling Cart (gold).",
+      "Section": "Prices"
+    },
+    "EnablePatchworkGuardian": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Description": "Allow the Patchwork Guardian rarecrow to be sold in shops & festivals. Existing placed rarecrows are not affected.",
+      "Section": "Rares"
+    },
+    "EnableSkeletonFarmer": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Description": "Allow the Skeleton Farmer rarecrow to be sold in shops & festivals. Existing placed rarecrows are not affected.",
+      "Section": "Rares"
+    },
+    "EnableSkeletonFarmerBones": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Description": "If enabled, the Skeleton Farmer rarecrow produces Bone Fragments daily while placed.",
+      "Section": "Bonuses"
+    },
+    "EnableGuardianCandy": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Description": "If enabled, the Patchwork Guardian produces Magic Rock Candy on Fall 26–27.",
+      "Section": "Bonuses"
+    },
+    "EnableGhostDog": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Description": "Allow the Ghost Dog rarecrow to be sold in shops & festivals. Existing placed rarecrows are not affected.",
+      "Section": "Rares"
+    },
+    "AllAreRare": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Description": "If true, all NBC rarecrows can only be purchased once per player (ever). If false, they reset based on stock limits.",
+      "Section": "Rarity"
+    },
+    "EnableGhostDogGifts": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Description": "If enabled, the Ghost Dog rarecrow produces one themed item every other day while placed (seasonally weighted).",
+      "Section": "Bonuses"
+    },
+    "EnablePumpkinKing": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Description": "Allow the Pumpkin King rarecrow to be sold in shops & festivals. Existing placed rarecrows are not affected.",
+      "Section": "Rares"
+    },
+    "EnablePumpkinKingGifts": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Description": "If enabled, the Pumpkin King produces one themed item every other day in Fall and Winter while placed.",
+      "Section": "Bonuses"
+    },
+    "EnableSpiritsEveCostumeDrops": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Description": "If enabled, Spirit's Eve (Fall 27) grants costume hats for players who obtained the related NBC rarecrows.",
+      "Section": "Bonuses"
+    }
+  },
+  "Changes": [
+    {
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/TileSheets/NBC_Rarecrows_Primary",
+      "FromFile": "assets/primary/nbc_rarecrows.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/TileSheets/NBC_Rarecrows_Testing",
+      "FromFile": "assets/testing/nbc_rarecrows.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/PatchworkGuardian_Primary",
+      "FromFile": "assets/primary/patchwork_guardian.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/PatchworkGuardian_Testing",
+      "FromFile": "assets/testing/patchwork_guardian.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/SkeletonFarmer_Primary",
+      "FromFile": "assets/primary/skeleton_farmer.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/SkeletonFarmer_Testing",
+      "FromFile": "assets/testing/skeleton_farmer.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/GhostDog_Primary",
+      "FromFile": "assets/primary/ghost_dog.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/GhostDog_Testing",
+      "FromFile": "assets/testing/ghost_dog.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/PumpkinKing_Primary",
+      "FromFile": "assets/primary/pumpkin_king.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/PumpkinKing_Testing",
+      "FromFile": "assets/testing/pumpkin_king.png"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/BigCraftables",
+      "Entries": {
+        "{{ModId}}_Rarecrow_PinstripeGent": {
+          "Name": "Rarecrow_PinstripeGent",
+          "DisplayName": "Pinstripe Gentleman Rarecrow",
+          "Description": "A tall, spooky guardian with refined, eerie charm.",
+          "CanBePlacedIndoors": false,
+          "CanBePlacedOutdoors": true,
+          "Texture": "Mods/{{ModId}}/TileSheets/NBC_Rarecrows_{{SpriteSet}}",
+          "SpriteIndex": 0,
+          "ContextTags": [
+            "crow_scare",
+            "crow_scare_radius_9",
+            "rarecrow"
+          ]
+        },
+        "{{ModId}}_Rarecrow_PatchworkSeamstress": {
+          "Name": "Rarecrow_PatchworkSeamstress",
+          "DisplayName": "Patchwork Seamstress Rarecrow",
+          "Description": "A stitched-together sentinel with a sweetly haunting look.",
+          "CanBePlacedIndoors": false,
+          "CanBePlacedOutdoors": true,
+          "Texture": "Mods/{{ModId}}/TileSheets/NBC_Rarecrows_{{SpriteSet}}",
+          "SpriteIndex": 1,
+          "ContextTags": [
+            "crow_scare",
+            "crow_scare_radius_9",
+            "rarecrow"
+          ]
+        },
+        "{{ModId}}_Rarecrow_PatchworkGuardian": {
+          "Name": "Rarecrow_PatchworkGuardian",
+          "DisplayName": "Patchwork Guardian Rarecrow",
+          "Description": "A lovingly stitched guardian that watches your fields with quiet care.",
+          "CanBePlacedIndoors": false,
+          "CanBePlacedOutdoors": true,
+          "Texture": "Mods/{{ModId}}/PatchworkGuardian_{{SpriteSet}}",
+          "SpriteIndex": 0,
+          "ContextTags": [
+            "crow_scare",
+            "crow_scare_radius_9",
+            "rarecrow"
+          ]
+        },
+        "{{ModId}}_Rarecrow_SkeletonFarmer": {
+          "Name": "Rarecrow_SkeletonFarmer",
+          "DisplayName": "Skeleton Farmer Rarecrow",
+          "Description": "A bony farmhand who never stops tending the fields.",
+          "CanBePlacedIndoors": false,
+          "CanBePlacedOutdoors": true,
+          "Texture": "Mods/{{ModId}}/SkeletonFarmer_{{SpriteSet}}",
+          "SpriteIndex": 0,
+          "ContextTags": [
+            "crow_scare",
+            "crow_scare_radius_9",
+            "rarecrow"
+          ]
+        },
+        "{{ModId}}_Rarecrow_GhostDog": {
+          "Name": "Rarecrow_GhostDog",
+          "DisplayName": "Ghost Dog Rarecrow",
+          "Description": "A spectral watchdog that quietly guards your fields.",
+          "CanBePlacedIndoors": false,
+          "CanBePlacedOutdoors": true,
+          "Texture": "Mods/{{ModId}}/GhostDog_{{SpriteSet}}",
+          "SpriteIndex": 0,
+          "ContextTags": [
+            "crow_scare",
+            "crow_scare_radius_9",
+            "rarecrow"
+          ]
+        },
+        "{{ModId}}_Rarecrow_PumpkinKing": {
+          "Name": "Rarecrow_PumpkinKing",
+          "DisplayName": "Pumpkin King Rarecrow",
+          "Description": "A cozy jack-o-lantern monarch that guards your fields from above a sturdy stake.",
+          "CanBePlacedIndoors": false,
+          "CanBePlacedOutdoors": true,
+          "Texture": "Mods/{{ModId}}/PumpkinKing_{{SpriteSet}}",
+          "SpriteIndex": 0,
+          "ContextTags": [
+            "crow_scare",
+            "crow_scare_radius_9",
+            "rarecrow"
+          ]
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Festival_SpiritsEve_Pierre",
+        "Items"
+      ],
+      "When": {
+        "EnableSpiritsEve": "true",
+        "EnableGentleman": "true",
+        "AllAreRare": "true"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_PinstripeGent_SpiritsEve_Rare": {
+          "Id": "{{ModId}}_Shop_Rarecrow_PinstripeGent_SpiritsEve_Rare",
+          "ItemId": "(BC){{ModId}}_Rarecrow_PinstripeGent",
+          "Price": "{{PriceSpiritsEve}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_PinstripeGent"
+          ],
+          "Condition": "!PLAYER_STAT Current {{ModId}}_Bought_PinstripeGent 1"
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Festival_SpiritsEve_Pierre",
+        "Items"
+      ],
+      "When": {
+        "EnableSpiritsEve": "true",
+        "EnableGentleman": "true",
+        "AllAreRare": "false"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_PinstripeGent_SpiritsEve": {
+          "Id": "{{ModId}}_Shop_Rarecrow_PinstripeGent_SpiritsEve",
+          "ItemId": "(BC){{ModId}}_Rarecrow_PinstripeGent",
+          "Price": "{{PriceSpiritsEve}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_PinstripeGent"
+          ]
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Festival_SpiritsEve_Pierre",
+        "Items"
+      ],
+      "When": {
+        "EnableSpiritsEve": "true",
+        "EnableSeamstress": "true",
+        "AllAreRare": "true"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_Seamstress_SpiritsEve_Rare": {
+          "Id": "{{ModId}}_Shop_Rarecrow_Seamstress_SpiritsEve_Rare",
+          "ItemId": "(BC){{ModId}}_Rarecrow_PatchworkSeamstress",
+          "Price": "{{PriceSpiritsEve}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_Seamstress"
+          ],
+          "Condition": "!PLAYER_STAT Current {{ModId}}_Bought_Seamstress 1"
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Festival_SpiritsEve_Pierre",
+        "Items"
+      ],
+      "When": {
+        "EnableSpiritsEve": "true",
+        "EnableSeamstress": "true",
+        "AllAreRare": "false"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_Seamstress_SpiritsEve": {
+          "Id": "{{ModId}}_Shop_Rarecrow_Seamstress_SpiritsEve",
+          "ItemId": "(BC){{ModId}}_Rarecrow_PatchworkSeamstress",
+          "Price": "{{PriceSpiritsEve}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_Seamstress"
+          ]
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Festival_SpiritsEve_Pierre",
+        "Items"
+      ],
+      "When": {
+        "EnableSpiritsEve": "true",
+        "EnablePatchworkGuardian": "true",
+        "AllAreRare": "true"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_PatchworkGuardian_SpiritsEve_Rare": {
+          "Id": "{{ModId}}_Shop_Rarecrow_PatchworkGuardian_SpiritsEve_Rare",
+          "ItemId": "(BC){{ModId}}_Rarecrow_PatchworkGuardian",
+          "Price": "{{PriceSpiritsEve}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_PatchworkGuardian"
+          ],
+          "Condition": "!PLAYER_STAT Current {{ModId}}_Bought_PatchworkGuardian 1"
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Festival_SpiritsEve_Pierre",
+        "Items"
+      ],
+      "When": {
+        "EnableSpiritsEve": "true",
+        "EnablePatchworkGuardian": "true",
+        "AllAreRare": "false"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_PatchworkGuardian_SpiritsEve": {
+          "Id": "{{ModId}}_Shop_Rarecrow_PatchworkGuardian_SpiritsEve",
+          "ItemId": "(BC){{ModId}}_Rarecrow_PatchworkGuardian",
+          "Price": "{{PriceSpiritsEve}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_PatchworkGuardian"
+          ]
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Festival_SpiritsEve_Pierre",
+        "Items"
+      ],
+      "When": {
+        "EnableSpiritsEve": "true",
+        "EnableSkeletonFarmer": "true",
+        "AllAreRare": "true"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_SkeletonFarmer_SpiritsEve_Rare": {
+          "Id": "{{ModId}}_Shop_Rarecrow_SkeletonFarmer_SpiritsEve_Rare",
+          "ItemId": "(BC){{ModId}}_Rarecrow_SkeletonFarmer",
+          "Price": "{{PriceSpiritsEve}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_SkeletonFarmer"
+          ],
+          "Condition": "!PLAYER_STAT Current {{ModId}}_Bought_SkeletonFarmer 1"
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Festival_SpiritsEve_Pierre",
+        "Items"
+      ],
+      "When": {
+        "EnableSpiritsEve": "true",
+        "EnableSkeletonFarmer": "true",
+        "AllAreRare": "false"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_SkeletonFarmer_SpiritsEve": {
+          "Id": "{{ModId}}_Shop_Rarecrow_SkeletonFarmer_SpiritsEve",
+          "ItemId": "(BC){{ModId}}_Rarecrow_SkeletonFarmer",
+          "Price": "{{PriceSpiritsEve}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_SkeletonFarmer"
+          ]
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Traveler",
+        "Items"
+      ],
+      "When": {
+        "EnableTravelingCart": "true",
+        "EnableGentleman": "true",
+        "AllAreRare": "true"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_PinstripeGent_Traveler_Rare": {
+          "Id": "{{ModId}}_Shop_Rarecrow_PinstripeGent_Traveler_Rare",
+          "ItemId": "(BC){{ModId}}_Rarecrow_PinstripeGent",
+          "Price": "{{PriceTravelingCart}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_PinstripeGent"
+          ],
+          "Condition": "SEASON Fall Winter, !PLAYER_STAT Current {{ModId}}_Bought_PinstripeGent 1"
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Traveler",
+        "Items"
+      ],
+      "When": {
+        "EnableTravelingCart": "true",
+        "EnableGentleman": "true",
+        "AllAreRare": "false"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_PinstripeGent_Traveler": {
+          "Id": "{{ModId}}_Shop_Rarecrow_PinstripeGent_Traveler",
+          "ItemId": "(BC){{ModId}}_Rarecrow_PinstripeGent",
+          "Price": "{{PriceTravelingCart}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "Condition": "SEASON Fall Winter",
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_PinstripeGent"
+          ]
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Traveler",
+        "Items"
+      ],
+      "When": {
+        "EnableTravelingCart": "true",
+        "EnableSeamstress": "true",
+        "AllAreRare": "true"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_Seamstress_Traveler_Rare": {
+          "Id": "{{ModId}}_Shop_Rarecrow_Seamstress_Traveler_Rare",
+          "ItemId": "(BC){{ModId}}_Rarecrow_PatchworkSeamstress",
+          "Price": "{{PriceTravelingCart}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_Seamstress"
+          ],
+          "Condition": "SEASON Fall Winter, !PLAYER_STAT Current {{ModId}}_Bought_Seamstress 1"
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Traveler",
+        "Items"
+      ],
+      "When": {
+        "EnableTravelingCart": "true",
+        "EnableSeamstress": "true",
+        "AllAreRare": "false"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_Seamstress_Traveler": {
+          "Id": "{{ModId}}_Shop_Rarecrow_Seamstress_Traveler",
+          "ItemId": "(BC){{ModId}}_Rarecrow_PatchworkSeamstress",
+          "Price": "{{PriceTravelingCart}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "Condition": "SEASON Fall Winter",
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_Seamstress"
+          ]
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Traveler",
+        "Items"
+      ],
+      "When": {
+        "EnableTravelingCart": "true",
+        "EnablePatchworkGuardian": "true",
+        "AllAreRare": "true"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_PatchworkGuardian_Traveler_Rare": {
+          "Id": "{{ModId}}_Shop_Rarecrow_PatchworkGuardian_Traveler_Rare",
+          "ItemId": "(BC){{ModId}}_Rarecrow_PatchworkGuardian",
+          "Price": "{{PriceTravelingCart}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_PatchworkGuardian"
+          ],
+          "Condition": "SEASON Fall Winter, !PLAYER_STAT Current {{ModId}}_Bought_PatchworkGuardian 1"
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Traveler",
+        "Items"
+      ],
+      "When": {
+        "EnableTravelingCart": "true",
+        "EnablePatchworkGuardian": "true",
+        "AllAreRare": "false"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_PatchworkGuardian_Traveler": {
+          "Id": "{{ModId}}_Shop_Rarecrow_PatchworkGuardian_Traveler",
+          "ItemId": "(BC){{ModId}}_Rarecrow_PatchworkGuardian",
+          "Price": "{{PriceTravelingCart}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "Condition": "SEASON Fall Winter",
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_PatchworkGuardian"
+          ]
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Traveler",
+        "Items"
+      ],
+      "When": {
+        "EnableTravelingCart": "true",
+        "EnableSkeletonFarmer": "true",
+        "AllAreRare": "true"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_SkeletonFarmer_Traveler_Rare": {
+          "Id": "{{ModId}}_Shop_Rarecrow_SkeletonFarmer_Traveler_Rare",
+          "ItemId": "(BC){{ModId}}_Rarecrow_SkeletonFarmer",
+          "Price": "{{PriceTravelingCart}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_SkeletonFarmer"
+          ],
+          "Condition": "SEASON Fall Winter, !PLAYER_STAT Current {{ModId}}_Bought_SkeletonFarmer 1"
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Traveler",
+        "Items"
+      ],
+      "When": {
+        "EnableTravelingCart": "true",
+        "EnableSkeletonFarmer": "true",
+        "AllAreRare": "false"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_SkeletonFarmer_Traveler": {
+          "Id": "{{ModId}}_Shop_Rarecrow_SkeletonFarmer_Traveler",
+          "ItemId": "(BC){{ModId}}_Rarecrow_SkeletonFarmer",
+          "Price": "{{PriceTravelingCart}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "Condition": "SEASON Fall Winter",
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_SkeletonFarmer"
+          ]
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Traveler",
+        "Items"
+      ],
+      "When": {
+        "EnableNightMarket": "true",
+        "EnableGentleman": "true",
+        "AllAreRare": "true"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_PinstripeGent_NightMarket_Rare": {
+          "Id": "{{ModId}}_Shop_Rarecrow_PinstripeGent_NightMarket_Rare",
+          "ItemId": "(BC){{ModId}}_Rarecrow_PinstripeGent",
+          "Price": "{{PriceNightMarket}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_PinstripeGent"
+          ],
+          "Condition": "SEASON Winter, DAY_OF_MONTH 15 16 17, !PLAYER_STAT Current {{ModId}}_Bought_PinstripeGent 1"
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Traveler",
+        "Items"
+      ],
+      "When": {
+        "EnableNightMarket": "true",
+        "EnableGentleman": "true",
+        "AllAreRare": "false"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_PinstripeGent_NightMarket": {
+          "Id": "{{ModId}}_Shop_Rarecrow_PinstripeGent_NightMarket",
+          "ItemId": "(BC){{ModId}}_Rarecrow_PinstripeGent",
+          "Price": "{{PriceNightMarket}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "Condition": "SEASON Winter, DAY_OF_MONTH 15 16 17",
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_PinstripeGent"
+          ]
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Traveler",
+        "Items"
+      ],
+      "When": {
+        "EnableNightMarket": "true",
+        "EnableSeamstress": "true",
+        "AllAreRare": "true"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_Seamstress_NightMarket_Rare": {
+          "Id": "{{ModId}}_Shop_Rarecrow_Seamstress_NightMarket_Rare",
+          "ItemId": "(BC){{ModId}}_Rarecrow_PatchworkSeamstress",
+          "Price": "{{PriceNightMarket}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_Seamstress"
+          ],
+          "Condition": "SEASON Winter, DAY_OF_MONTH 15 16 17, !PLAYER_STAT Current {{ModId}}_Bought_Seamstress 1"
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Traveler",
+        "Items"
+      ],
+      "When": {
+        "EnableNightMarket": "true",
+        "EnableSeamstress": "true",
+        "AllAreRare": "false"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_Seamstress_NightMarket": {
+          "Id": "{{ModId}}_Shop_Rarecrow_Seamstress_NightMarket",
+          "ItemId": "(BC){{ModId}}_Rarecrow_PatchworkSeamstress",
+          "Price": "{{PriceNightMarket}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "Condition": "SEASON Winter, DAY_OF_MONTH 15 16 17",
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_Seamstress"
+          ]
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Traveler",
+        "Items"
+      ],
+      "When": {
+        "EnableNightMarket": "true",
+        "EnablePatchworkGuardian": "true",
+        "AllAreRare": "true"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_PatchworkGuardian_NightMarket_Rare": {
+          "Id": "{{ModId}}_Shop_Rarecrow_PatchworkGuardian_NightMarket_Rare",
+          "ItemId": "(BC){{ModId}}_Rarecrow_PatchworkGuardian",
+          "Price": "{{PriceNightMarket}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_PatchworkGuardian"
+          ],
+          "Condition": "SEASON Winter, DAY_OF_MONTH 15 16 17, !PLAYER_STAT Current {{ModId}}_Bought_PatchworkGuardian 1"
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Traveler",
+        "Items"
+      ],
+      "When": {
+        "EnableNightMarket": "true",
+        "EnablePatchworkGuardian": "true",
+        "AllAreRare": "false"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_PatchworkGuardian_NightMarket": {
+          "Id": "{{ModId}}_Shop_Rarecrow_PatchworkGuardian_NightMarket",
+          "ItemId": "(BC){{ModId}}_Rarecrow_PatchworkGuardian",
+          "Price": "{{PriceNightMarket}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "Condition": "SEASON Winter, DAY_OF_MONTH 15 16 17",
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_PatchworkGuardian"
+          ]
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Traveler",
+        "Items"
+      ],
+      "When": {
+        "EnableNightMarket": "true",
+        "EnableSkeletonFarmer": "true",
+        "AllAreRare": "true"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_SkeletonFarmer_NightMarket_Rare": {
+          "Id": "{{ModId}}_Shop_Rarecrow_SkeletonFarmer_NightMarket_Rare",
+          "ItemId": "(BC){{ModId}}_Rarecrow_SkeletonFarmer",
+          "Price": "{{PriceNightMarket}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_SkeletonFarmer"
+          ],
+          "Condition": "SEASON Winter, DAY_OF_MONTH 15 16 17, !PLAYER_STAT Current {{ModId}}_Bought_SkeletonFarmer 1"
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Traveler",
+        "Items"
+      ],
+      "When": {
+        "EnableNightMarket": "true",
+        "EnableSkeletonFarmer": "true",
+        "AllAreRare": "false"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_SkeletonFarmer_NightMarket": {
+          "Id": "{{ModId}}_Shop_Rarecrow_SkeletonFarmer_NightMarket",
+          "ItemId": "(BC){{ModId}}_Rarecrow_SkeletonFarmer",
+          "Price": "{{PriceNightMarket}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "Condition": "SEASON Winter, DAY_OF_MONTH 15 16 17",
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_SkeletonFarmer"
+          ]
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Machines",
+      "Entries": {
+        "(BC){{ModId}}_Rarecrow_SkeletonFarmer": {
+          "OutputRules": [
+            {
+              "Id": "{{ModId}}_SkeletonFarmerDailyBones",
+              "Triggers": [
+                {
+                  "Id": "PutDown",
+                  "Trigger": "MachinePutDown",
+                  "Condition": "{{EnableSkeletonFarmerBones}}"
+                },
+                {
+                  "Id": "Collected",
+                  "Trigger": "OutputCollected",
+                  "Condition": "{{EnableSkeletonFarmerBones}}"
+                },
+                {
+                  "Id": "DayStart",
+                  "Trigger": "DayUpdate",
+                  "Condition": "{{EnableSkeletonFarmerBones}}"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "Bones_01",
+                  "ItemId": "(O)881",
+                  "Stack": "5"
+                },
+                {
+                  "Id": "Bones_02",
+                  "ItemId": "(O)881",
+                  "Stack": "5"
+                },
+                {
+                  "Id": "Bones_03",
+                  "ItemId": "(O)881",
+                  "Stack": "5"
+                },
+                {
+                  "Id": "Bones_04",
+                  "ItemId": "(O)881",
+                  "Stack": "5"
+                },
+                {
+                  "Id": "Bones_05",
+                  "ItemId": "(O)881",
+                  "Stack": "5"
+                },
+                {
+                  "Id": "Bones_06",
+                  "ItemId": "(O)881",
+                  "Stack": "5"
+                },
+                {
+                  "Id": "Bones_07",
+                  "ItemId": "(O)881",
+                  "Stack": "5"
+                },
+                {
+                  "Id": "BoneFlute",
+                  "ItemId": "(O)119",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "SkeletalHand",
+                  "ItemId": "(O)582",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "SkeletalTail",
+                  "ItemId": "(O)585",
+                  "Stack": "1"
+                }
+              ],
+              "DaysUntilReady": 1
+            }
+          ],
+          "LoadEffects": [
+            {
+              "ShakeDuration": 250
+            }
+          ]
+        },
+        "(BC){{ModId}}_Rarecrow_PumpkinKing": {
+          "OutputRules": [
+            {
+              "Id": "{{ModId}}_PumpkinKingPool_Fall",
+              "Triggers": [
+                {
+                  "Id": "PutDown",
+                  "Trigger": "MachinePutDown",
+                  "Condition": "{{EnablePumpkinKingGifts}}, SEASON Fall"
+                },
+                {
+                  "Id": "Collected",
+                  "Trigger": "OutputCollected",
+                  "Condition": "{{EnablePumpkinKingGifts}}, SEASON Fall"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "JackOLantern_01",
+                  "ItemId": "(O)746",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "Pumpkin_02",
+                  "ItemId": "(O)276",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "PumpkinSeeds_03",
+                  "ItemId": "(O)490",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "PumpkinSoup_04",
+                  "ItemId": "(O)236",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "PumpkinPie_05",
+                  "ItemId": "(O)608",
+                  "Stack": "1"
+                }
+              ],
+              "DaysUntilReady": 2
+            },
+            {
+              "Id": "{{ModId}}_PumpkinKingPool_Winter",
+              "Triggers": [
+                {
+                  "Id": "PutDown",
+                  "Trigger": "MachinePutDown",
+                  "Condition": "{{EnablePumpkinKingGifts}}, SEASON Winter"
+                },
+                {
+                  "Id": "Collected",
+                  "Trigger": "OutputCollected",
+                  "Condition": "{{EnablePumpkinKingGifts}}, SEASON Winter"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "Pumpkin_01",
+                  "ItemId": "(O)276",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "PumpkinSeeds_02",
+                  "ItemId": "(O)490",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "PumpkinSoup_03",
+                  "ItemId": "(O)236",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "PumpkinPie_04",
+                  "ItemId": "(O)608",
+                  "Stack": "1"
+                }
+              ],
+              "DaysUntilReady": 2
+            }
+          ],
+          "LoadEffects": [
+            {
+              "ShakeDuration": 200
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Machines",
+      "Entries": {
+        "(BC){{ModId}}_Rarecrow_PatchworkGuardian": {
+          "OutputRules": [
+            {
+              "Id": "{{ModId}}_GuardianCandy_Fall26_ForSpiritsEve",
+              "Triggers": [
+                {
+                  "Id": "PutDown",
+                  "Trigger": "MachinePutDown",
+                  "Condition": "{{EnableGuardianCandy}}, SEASON Fall, DAY_OF_MONTH 26"
+                },
+                {
+                  "Id": "DayStart",
+                  "Trigger": "DayUpdate",
+                  "Condition": "{{EnableGuardianCandy}}, SEASON Fall, DAY_OF_MONTH 26"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "MagicRockCandy",
+                  "ItemId": "(O)279",
+                  "Stack": "1"
+                }
+              ],
+              "DaysUntilReady": 1
+            },
+            {
+              "Id": "{{ModId}}_GuardianCandy_Winter24_ForWinterStar",
+              "Triggers": [
+                {
+                  "Id": "PutDown",
+                  "Trigger": "MachinePutDown",
+                  "Condition": "{{EnableGuardianCandy}}, SEASON Winter, DAY_OF_MONTH 24"
+                },
+                {
+                  "Id": "DayStart",
+                  "Trigger": "DayUpdate",
+                  "Condition": "{{EnableGuardianCandy}}, SEASON Winter, DAY_OF_MONTH 24"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "MagicRockCandy",
+                  "ItemId": "(O)279",
+                  "Stack": "1"
+                }
+              ],
+              "DaysUntilReady": 1
+            }
+          ],
+          "LoadEffects": [
+            {
+              "ShakeDuration": 200
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Festival_SpiritsEve_Pierre",
+        "Items"
+      ],
+      "When": {
+        "EnableSpiritsEve": "true",
+        "EnableGhostDog": "true",
+        "AllAreRare": "true"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_GhostDog_SpiritsEve_Rare": {
+          "Id": "{{ModId}}_Shop_Rarecrow_GhostDog_SpiritsEve_Rare",
+          "ItemId": "(BC){{ModId}}_Rarecrow_GhostDog",
+          "Price": "{{PriceSpiritsEve}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_GhostDog"
+          ],
+          "Condition": "!PLAYER_STAT Current {{ModId}}_Bought_GhostDog 1"
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Festival_SpiritsEve_Pierre",
+        "Items"
+      ],
+      "When": {
+        "EnableSpiritsEve": "true",
+        "EnableGhostDog": "true",
+        "AllAreRare": "false"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_GhostDog_SpiritsEve": {
+          "Id": "{{ModId}}_Shop_Rarecrow_GhostDog_SpiritsEve",
+          "ItemId": "(BC){{ModId}}_Rarecrow_GhostDog",
+          "Price": "{{PriceSpiritsEve}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_GhostDog"
+          ]
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Traveler",
+        "Items"
+      ],
+      "When": {
+        "EnableTravelingCart": "true",
+        "EnableGhostDog": "true",
+        "AllAreRare": "true"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_GhostDog_Traveler_Rare": {
+          "Id": "{{ModId}}_Shop_Rarecrow_GhostDog_Traveler_Rare",
+          "ItemId": "(BC){{ModId}}_Rarecrow_GhostDog",
+          "Price": "{{PriceTravelingCart}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_GhostDog"
+          ],
+          "Condition": "SEASON Fall Winter, !PLAYER_STAT Current {{ModId}}_Bought_GhostDog 1"
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Traveler",
+        "Items"
+      ],
+      "When": {
+        "EnableTravelingCart": "true",
+        "EnableGhostDog": "true",
+        "AllAreRare": "false"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_GhostDog_Traveler": {
+          "Id": "{{ModId}}_Shop_Rarecrow_GhostDog_Traveler",
+          "ItemId": "(BC){{ModId}}_Rarecrow_GhostDog",
+          "Price": "{{PriceTravelingCart}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "Condition": "SEASON Fall Winter",
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_GhostDog"
+          ]
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Traveler",
+        "Items"
+      ],
+      "When": {
+        "EnableNightMarket": "true",
+        "EnableGhostDog": "true",
+        "AllAreRare": "true"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_GhostDog_NightMarket_Rare": {
+          "Id": "{{ModId}}_Shop_Rarecrow_GhostDog_NightMarket_Rare",
+          "ItemId": "(BC){{ModId}}_Rarecrow_GhostDog",
+          "Price": "{{PriceNightMarket}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_GhostDog"
+          ],
+          "Condition": "SEASON Winter, DAY_OF_MONTH 15 16 17, !PLAYER_STAT Current {{ModId}}_Bought_GhostDog 1"
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Traveler",
+        "Items"
+      ],
+      "When": {
+        "EnableNightMarket": "true",
+        "EnableGhostDog": "true",
+        "AllAreRare": "false"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_GhostDog_NightMarket": {
+          "Id": "{{ModId}}_Shop_Rarecrow_GhostDog_NightMarket",
+          "ItemId": "(BC){{ModId}}_Rarecrow_GhostDog",
+          "Price": "{{PriceNightMarket}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "Condition": "SEASON Winter, DAY_OF_MONTH 15 16 17",
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_GhostDog"
+          ]
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Machines",
+      "Entries": {
+        "(BC){{ModId}}_Rarecrow_GhostDog": {
+          "OutputRules": [
+            {
+              "Id": "{{ModId}}_GhostDogPool_SpringSummer",
+              "Triggers": [
+                {
+                  "Id": "PutDown",
+                  "Trigger": "MachinePutDown",
+                  "Condition": "{{EnableGhostDogGifts}}, SEASON Spring Summer"
+                },
+                {
+                  "Id": "Collected",
+                  "Trigger": "OutputCollected",
+                  "Condition": "{{EnableGhostDogGifts}}, SEASON Spring Summer"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "Cloth_01",
+                  "ItemId": "(O)428",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "Cloth_02",
+                  "ItemId": "(O)428",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "Cloth_03",
+                  "ItemId": "(O)428",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "Cloth_04",
+                  "ItemId": "(O)428",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "Cloth_05",
+                  "ItemId": "(O)428",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "Cloth_06",
+                  "ItemId": "(O)428",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "Cloth_07",
+                  "ItemId": "(O)428",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "Cloth_08",
+                  "ItemId": "(O)428",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "Cloth_09",
+                  "ItemId": "(O)428",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "Cloth_10",
+                  "ItemId": "(O)428",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "Cloth_11",
+                  "ItemId": "(O)428",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "Cloth_12",
+                  "ItemId": "(O)428",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "Cloth_13",
+                  "ItemId": "(O)428",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "ChewingStick_14",
+                  "ItemId": "(O)105",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "ChewingStick_15",
+                  "ItemId": "(O)105",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "ChewingStick_16",
+                  "ItemId": "(O)105",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "ChewingStick_17",
+                  "ItemId": "(O)105",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "GhostCrystal_18",
+                  "ItemId": "(O)561",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "GhostCrystal_19",
+                  "ItemId": "(O)561",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "StrangeBun_20",
+                  "ItemId": "(O)203",
+                  "Stack": "1"
+                }
+              ],
+              "DaysUntilReady": 2
+            },
+            {
+              "Id": "{{ModId}}_GhostDogPool_Fall",
+              "Triggers": [
+                {
+                  "Id": "PutDown",
+                  "Trigger": "MachinePutDown",
+                  "Condition": "{{EnableGhostDogGifts}}, SEASON Fall"
+                },
+                {
+                  "Id": "Collected",
+                  "Trigger": "OutputCollected",
+                  "Condition": "{{EnableGhostDogGifts}}, SEASON Fall"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "Cloth_01",
+                  "ItemId": "(O)428",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "Cloth_02",
+                  "ItemId": "(O)428",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "Cloth_03",
+                  "ItemId": "(O)428",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "Cloth_04",
+                  "ItemId": "(O)428",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "Cloth_05",
+                  "ItemId": "(O)428",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "Cloth_06",
+                  "ItemId": "(O)428",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "Cloth_07",
+                  "ItemId": "(O)428",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "Cloth_08",
+                  "ItemId": "(O)428",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "Cloth_09",
+                  "ItemId": "(O)428",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "Cloth_10",
+                  "ItemId": "(O)428",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "Cloth_11",
+                  "ItemId": "(O)428",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "ChewingStick_12",
+                  "ItemId": "(O)105",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "ChewingStick_13",
+                  "ItemId": "(O)105",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "ChewingStick_14",
+                  "ItemId": "(O)105",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "ChewingStick_15",
+                  "ItemId": "(O)105",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "GhostCrystal_16",
+                  "ItemId": "(O)561",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "GhostCrystal_17",
+                  "ItemId": "(O)561",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "StrangeBun_18",
+                  "ItemId": "(O)203",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "StrangeBun_19",
+                  "ItemId": "(O)203",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "StrangeBun_20",
+                  "ItemId": "(O)203",
+                  "Stack": "1"
+                }
+              ],
+              "DaysUntilReady": 2
+            },
+            {
+              "Id": "{{ModId}}_GhostDogPool_Winter",
+              "Triggers": [
+                {
+                  "Id": "PutDown",
+                  "Trigger": "MachinePutDown",
+                  "Condition": "{{EnableGhostDogGifts}}, SEASON Winter"
+                },
+                {
+                  "Id": "Collected",
+                  "Trigger": "OutputCollected",
+                  "Condition": "{{EnableGhostDogGifts}}, SEASON Winter"
+                }
+              ],
+              "OutputItem": [
+                {
+                  "Id": "Cloth_01",
+                  "ItemId": "(O)428",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "Cloth_02",
+                  "ItemId": "(O)428",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "Cloth_03",
+                  "ItemId": "(O)428",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "Cloth_04",
+                  "ItemId": "(O)428",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "Cloth_05",
+                  "ItemId": "(O)428",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "Cloth_06",
+                  "ItemId": "(O)428",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "Cloth_07",
+                  "ItemId": "(O)428",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "Cloth_08",
+                  "ItemId": "(O)428",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "Cloth_09",
+                  "ItemId": "(O)428",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "Cloth_10",
+                  "ItemId": "(O)428",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "Cloth_11",
+                  "ItemId": "(O)428",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "ChewingStick_12",
+                  "ItemId": "(O)105",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "ChewingStick_13",
+                  "ItemId": "(O)105",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "ChewingStick_14",
+                  "ItemId": "(O)105",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "ChewingStick_15",
+                  "ItemId": "(O)105",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "GhostCrystal_16",
+                  "ItemId": "(O)561",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "GhostCrystal_17",
+                  "ItemId": "(O)561",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "GhostCrystal_18",
+                  "ItemId": "(O)561",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "GhostCrystal_19",
+                  "ItemId": "(O)561",
+                  "Stack": "1"
+                },
+                {
+                  "Id": "StrangeBun_20",
+                  "ItemId": "(O)203",
+                  "Stack": "1"
+                }
+              ],
+              "DaysUntilReady": 2
+            }
+          ],
+          "LoadEffects": [
+            {
+              "ShakeDuration": 200
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Festival_SpiritsEve_Pierre",
+        "Items"
+      ],
+      "When": {
+        "EnableSpiritsEve": "true",
+        "EnablePumpkinKing": "true",
+        "AllAreRare": "true"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_PumpkinKing_SpiritsEve_Rare": {
+          "Id": "{{ModId}}_Shop_Rarecrow_PumpkinKing_SpiritsEve_Rare",
+          "ItemId": "(BC){{ModId}}_Rarecrow_PumpkinKing",
+          "Price": "{{PriceSpiritsEve}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_PumpkinKing"
+          ],
+          "Condition": "!PLAYER_STAT Current {{ModId}}_Bought_PumpkinKing 1"
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Festival_SpiritsEve_Pierre",
+        "Items"
+      ],
+      "When": {
+        "EnableSpiritsEve": "true",
+        "EnablePumpkinKing": "true",
+        "AllAreRare": "false"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_PumpkinKing_SpiritsEve": {
+          "Id": "{{ModId}}_Shop_Rarecrow_PumpkinKing_SpiritsEve",
+          "ItemId": "(BC){{ModId}}_Rarecrow_PumpkinKing",
+          "Price": "{{PriceSpiritsEve}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_PumpkinKing"
+          ]
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Traveler",
+        "Items"
+      ],
+      "When": {
+        "EnableTravelingCart": "true",
+        "EnablePumpkinKing": "true",
+        "AllAreRare": "true"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_PumpkinKing_Traveler_Rare": {
+          "Id": "{{ModId}}_Shop_Rarecrow_PumpkinKing_Traveler_Rare",
+          "ItemId": "(BC){{ModId}}_Rarecrow_PumpkinKing",
+          "Price": "{{PriceTravelingCart}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_PumpkinKing"
+          ],
+          "Condition": "SEASON Fall Winter, !PLAYER_STAT Current {{ModId}}_Bought_PumpkinKing 1"
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Traveler",
+        "Items"
+      ],
+      "When": {
+        "EnableTravelingCart": "true",
+        "EnablePumpkinKing": "true",
+        "AllAreRare": "false"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_PumpkinKing_Traveler": {
+          "Id": "{{ModId}}_Shop_Rarecrow_PumpkinKing_Traveler",
+          "ItemId": "(BC){{ModId}}_Rarecrow_PumpkinKing",
+          "Price": "{{PriceTravelingCart}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "Condition": "SEASON Fall Winter",
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_PumpkinKing"
+          ]
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Traveler",
+        "Items"
+      ],
+      "When": {
+        "EnableNightMarket": "true",
+        "EnablePumpkinKing": "true",
+        "AllAreRare": "true"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_PumpkinKing_NightMarket_Rare": {
+          "Id": "{{ModId}}_Shop_Rarecrow_PumpkinKing_NightMarket_Rare",
+          "ItemId": "(BC){{ModId}}_Rarecrow_PumpkinKing",
+          "Price": "{{PriceNightMarket}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_PumpkinKing"
+          ],
+          "Condition": "SEASON Winter, DAY_OF_MONTH 15 16 17, !PLAYER_STAT Current {{ModId}}_Bought_PumpkinKing 1"
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [
+        "Traveler",
+        "Items"
+      ],
+      "When": {
+        "EnableNightMarket": "true",
+        "EnablePumpkinKing": "true",
+        "AllAreRare": "false"
+      },
+      "Entries": {
+        "{{ModId}}_Shop_Rarecrow_PumpkinKing_NightMarket": {
+          "Id": "{{ModId}}_Shop_Rarecrow_PumpkinKing_NightMarket",
+          "ItemId": "(BC){{ModId}}_Rarecrow_PumpkinKing",
+          "Price": "{{PriceNightMarket}}",
+          "AvailableStock": "{{StockPerPlayer}}",
+          "AvailableStockLimit": "Player",
+          "AvoidRepeat": true,
+          "Condition": "SEASON Winter, DAY_OF_MONTH 15 16 17",
+          "ActionsOnPurchase": [
+            "IncrementStat {{ModId}}_Bought_PumpkinKing"
+          ]
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "{{ModId}}_SpiritsEve_PumpkinKingMask": {
+          "Id": "{{ModId}}_SpiritsEve_PumpkinKingMask",
+          "Trigger": "DayStarted",
+          "Condition": "{{EnableSpiritsEveCostumeDrops}}, SEASON Fall, DAY_OF_MONTH 27, PLAYER_STAT Current {{ModId}}_Bought_PumpkinKing 1",
+          "MarkActionApplied": false,
+          "Actions": [
+            "If !PLAYER_HAS_MAIL Current {{ModId}}_SpiritsEve_MasksNote_First Received, !PLAYER_HAS_MAIL Current {{ModId}}_SpiritsEve_MasksNote_First Mailbox, !PLAYER_HAS_MAIL Current {{ModId}}_SpiritsEve_MasksNote_Return Mailbox ## AddMail Current {{ModId}}_SpiritsEve_MasksNote_First Now",
+            "If PLAYER_HAS_MAIL Current {{ModId}}_SpiritsEve_MasksNote_First Received, !PLAYER_HAS_MAIL Current {{ModId}}_SpiritsEve_MasksNote_Return Mailbox ## AddMail Current {{ModId}}_SpiritsEve_MasksNote_Return Now",
+            "AddItem (H)48 1"
+          ]
+        },
+        "{{ModId}}_SpiritsEve_SkeletonFarmerMask": {
+          "Id": "{{ModId}}_SpiritsEve_SkeletonFarmerMask",
+          "Trigger": "DayStarted",
+          "Condition": "{{EnableSpiritsEveCostumeDrops}}, SEASON Fall, DAY_OF_MONTH 27, PLAYER_STAT Current {{ModId}}_Bought_SkeletonFarmer 1",
+          "MarkActionApplied": false,
+          "Actions": [
+            "If !PLAYER_HAS_MAIL Current {{ModId}}_SpiritsEve_MasksNote_First Received, !PLAYER_HAS_MAIL Current {{ModId}}_SpiritsEve_MasksNote_First Mailbox, !PLAYER_HAS_MAIL Current {{ModId}}_SpiritsEve_MasksNote_Return Mailbox ## AddMail Current {{ModId}}_SpiritsEve_MasksNote_First Now",
+            "If PLAYER_HAS_MAIL Current {{ModId}}_SpiritsEve_MasksNote_First Received, !PLAYER_HAS_MAIL Current {{ModId}}_SpiritsEve_MasksNote_Return Mailbox ## AddMail Current {{ModId}}_SpiritsEve_MasksNote_Return Now",
+            "AddItem (H)8 1"
+          ]
+        },
+        "{{ModId}}_SpiritsEve_GhostDogMask": {
+          "Id": "{{ModId}}_SpiritsEve_GhostDogMask",
+          "Trigger": "DayStarted",
+          "Condition": "{{EnableSpiritsEveCostumeDrops}}, SEASON Fall, DAY_OF_MONTH 27, PLAYER_STAT Current {{ModId}}_Bought_GhostDog 1",
+          "MarkActionApplied": false,
+          "Actions": [
+            "If !PLAYER_HAS_MAIL Current {{ModId}}_SpiritsEve_MasksNote_First Received, !PLAYER_HAS_MAIL Current {{ModId}}_SpiritsEve_MasksNote_First Mailbox, !PLAYER_HAS_MAIL Current {{ModId}}_SpiritsEve_MasksNote_Return Mailbox ## AddMail Current {{ModId}}_SpiritsEve_MasksNote_First Now",
+            "If PLAYER_HAS_MAIL Current {{ModId}}_SpiritsEve_MasksNote_First Received, !PLAYER_HAS_MAIL Current {{ModId}}_SpiritsEve_MasksNote_Return Mailbox ## AddMail Current {{ModId}}_SpiritsEve_MasksNote_Return Now",
+            "AddItem (H)MummyMask 1"
+          ]
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Mail",
+      "Entries": {
+        "{{ModId}}_SpiritsEve_MasksNote_First": "@,^^When the valley dons its shadows and the maze opens its mouth, we stand watch in the fields… and we remember.^^So we slipped a few festive masks into your keeping—just for this Spirit’s Eve. Wear them proudly, if you dare.^^Each mask bears the spirit of its guardian. Try them on and see which one feels like *you*.^^Wear a scarecrow’s mask, and we’ll know: tonight, we keep the crows—and the creeps—at bay together.^^Happy haunting…^^   -The Pumpkin King^   -The Skeleton Farmer^   -The Ghost Dog^^P.S. The others may argue, but everyone knows my candy is the best treat of all.^^   -The Patchwork Guardian[#]A Midnight Gift",
+        "{{ModId}}_SpiritsEve_MasksNote_Return": "@,^^The air tastes the same tonight—cold, sweet, and full of footsteps that don’t always make tracks.^^Last Spirit’s Eve, you wore one of our faces and walked the dark paths without flinching. We noticed.^^So… we slipped another set of masks into your pockets. No fanfare. Just a quiet tradition.^^Keep the one that felt right last year… or switch it up, and see what kind of guardian you become this time.^^Whatever you choose, remember: we’re still out here, watching the rows.^^Happy haunting—again.^^   -The Pumpkin King^   -The Skeleton Farmer^   -The Ghost Dog^^P.S. Still the best candy. The others are… charming, though.^^   -The Patchwork Guardian[#]Midnight, Once More"
+      }
+    }
+  ]
+}
