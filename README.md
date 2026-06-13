@@ -2,6 +2,14 @@
 
 A Stardew Valley Content Patcher mod that adds custom copyright-safe rarecrow sprites with a configurable sprite set and optional shop behavior changes.
 
+## Concept Art
+
+![farmer](Artwork/farmer.png)
+![guardian](Artwork/guardian.png)
+![nbc_rarecrows_2](Artwork/nbc_rarecrows_2.png)
+![nbc_rarecrows_reference](Artwork/nbc_rarecrows_reference.png)
+![patchwork](Artwork/patchwork.png)
+
 ## Install
 
 1. Install [SMAPI](https://smapi.io/).
