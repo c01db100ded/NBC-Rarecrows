@@ -57,6 +57,7 @@ Remove the `Mods/NBC Rarecrows` folder.
 ## Credits
 
 - Sprites and content created with help from generative AI; C01DB100DED provided direction and assembly.
+- Special thanks to Liz for the inspiration to make this mod.
 
 ## Artwork
 
